@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SM Currency Exchange - fast currency conversion with live exchange rates.">
+  <title>SM Currency Exchange</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">💱 <span>SM Currency Exchange</span></div>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode">☾</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FREE CURRENCY CONVERTER</p>
+      <h1>Convert currencies quickly and easily.</h1>
+      <p class="subtitle">Live reference rates, a clean interface, and no account required.</p>
+    </section>
+
+    <section class="card">
+      <div class="form-grid">
+        <label>
+          <span>Amount</span>
+          <input id="amount" type="number" min="0" step="any" value="100" inputmode="decimal">
+        </label>
+
+        <label>
+          <span>From</span>
+          <select id="fromCurrency"></select>
+        </label>
+
+        <button id="swapBtn" class="swap-btn" aria-label="Swap currencies">⇄</button>
+
+        <label>
+          <span>To</span>
+          <select id="toCurrency"></select>
+        </label>
+      </div>
+
+      <button id="convertBtn" class="primary-btn">Convert</button>
+
+      <div id="result" class="result">
+        <div class="result-label">Converted amount</div>
+        <div id="converted" class="converted">—</div>
+        <div id="rate" class="rate">Enter an amount and convert.</div>
+      </div>
+
+      <div id="status" class="status" role="status"></div>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-card">
+        <strong>100+ currencies</strong>
+        <span>Major global currencies supported.</span>
+      </div>
+      <div class="info-card">
+        <strong>Live reference rates</strong>
+        <span>Rates are retrieved from an external public data source.</span>
+      </div>
+      <div class="info-card">
+        <strong>Mobile friendly</strong>
+        <span>Works on phones, tablets, and computers.</span>
+      </div>
+    </section>
+
+    <p class="disclaimer">
+      Rates are for informational purposes and may differ from bank, card, remittance, or cash-exchange rates.
+      This website does not execute currency trades.
+    </p>
+  </main>
+
+  <footer>
+    © <span id="year"></span> SM Currency Exchange
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
